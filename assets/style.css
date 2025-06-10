@@ -1,0 +1,216 @@
+/* Styles généraux */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.5;
+    color: #1d2327;
+    background-color: #f0f0f1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles pour les formulaires */
+.form-fournisseur {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #c3c4c7;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.form-field {
+    margin-bottom: 15px;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field input[type="tel"],
+.form-field input[type="password"],
+.form-field textarea,
+.form-field select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #c3c4c7;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border-color: #2271b1;
+    box-shadow: 0 0 0 1px #2271b1;
+    outline: 2px solid transparent;
+}
+
+/* Boutons */
+.button {
+    background: #2271b1;
+    border: 1px solid #2271b1;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 2;
+    height: 30px;
+    margin: 0;
+    padding: 0 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+.button:hover {
+    background: #135e96;
+    border-color: #135e96;
+}
+
+/* Notices et erreurs */
+.notice {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid;
+}
+
+.notice-error {
+    border-color: #d63638;
+    background-color: #f3e6e7;
+    color: #d63638;
+}
+
+.notice-success {
+    border-color: #00a32a;
+    background-color: #edfaef;
+    color: #00a32a;
+}
+
+.error {
+    color: #d63638;
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+/* Login */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h1 {
+    text-align: center;
+    color: #2271b1;
+}
+
+/* Animation pour les toasts */
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+#toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+#toast-container > div {
+    animation: slideInRight 0.5s ease-out forwards;
+    position: relative;
+    margin-bottom: 10px;
+    padding: 15px;
+    min-width: 250px;
+    border-radius: 3px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.toast-success {
+    background-color: #edfaef;
+    border-left: 4px solid #00a32a;
+    color: #00a32a;
+}
+
+.toast-error {
+    background-color: #f3e6e7;
+    border-left: 4px solid #d63638;
+    color: #d63638;
+}
+
+/* Modal */
+#modal-dossier {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#modal-dossier.hidden {
+    display: none;
+}
+
+#modal-dossier .modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 3px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+#modal-dossier .transform {
+    transform: scale(0.8);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+#modal-dossier:not(.hidden) .transform {
+    transform: scale(1);
+    opacity: 1;
+}
+/* Ajoutez ceci dans votre fichier CSS principal */
+#dossiersList {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+#dossiersList li {
+    padding: 0.5rem 1rem;
+    margin: 0.25rem 0;
+    border-radius: 0.25rem;
+}
+
+#dossiersList li:hover {
+    background-color: #edf2f7;
+}
+
+#usersTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#usersTable th, #usersTable td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}

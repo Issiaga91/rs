@@ -1,0 +1,12 @@
+Array
+(
+    [id] => 
+    [login] => alias
+    [email] => alias@serpas.fr
+    [mot_de_passe] => famille
+    [dossiers] => Array
+        (
+            [0] => 1
+        )
+
+)
